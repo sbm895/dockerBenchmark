@@ -6,4 +6,4 @@ COPY . /app
 
 RUN javac main.java
 
-CMD ["java", "main.java"]
+CMD ["eclipse-temurin", "main.java"]
