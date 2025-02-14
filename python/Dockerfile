@@ -8,4 +8,4 @@ WORKDIR /app
 
 EXPOSE 80 
 
-CMD ["ython", "main.py"]
+CMD ["python", "main.py"]
