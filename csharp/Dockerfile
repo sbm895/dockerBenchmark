@@ -8,4 +8,4 @@ WORKDIR /app
 COPY . /app
 
 # Compila el archivo Main.cs dentro del contenedor usando csc (compilador C#)
-RUN dotnet new console -o temp && cp Main.cs temp/Program.cs && cd temp && dotnet run
+RUN dotnet new console -o temp && cp main.cs temp/Program.cs && cd temp && dotnet run
