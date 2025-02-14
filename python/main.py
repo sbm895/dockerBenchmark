@@ -86,7 +86,7 @@ array = [5, 5, 27, 34, 59, 97, 79, 23, 60, 87, 46, 90, 50, 57, 12, 85, 18, 63, 7
 start = t.time()
 selection_sort(array)
 end = t.time()
-print('Python runtime = ', (end-start))
+print('Python runtime = ', (end-start),' seconds')
 
 with open('solved.txt', 'w') as file:
     file.write(str(array))
