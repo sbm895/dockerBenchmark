@@ -1,20 +1,9 @@
-# syntax=docker/dockerfile:1
+FROM golang:1.23.6-bookworm
 
-FROM golang:1.19
-
-# Set destination for COPY
 WORKDIR /app
 
-# Download Go modules
-COPY go.mod go.sum ./
-RUN go mod download
+COPY . /app
 
-# Copy the source code. Note the slash at the end, as explained in
-# https://docs.docker.com/reference/dockerfile/#copy
-COPY *.go ./
+RUN go build -o app main.go
 
-# Build
-RUN go build -o /main
-
-# Run
-CMD ["/main"]
+CMD ["./app"]
