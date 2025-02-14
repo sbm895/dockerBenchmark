@@ -1,12 +1,9 @@
-
-FROM openjdk:11-jdk-slim
-
-COPY . /app
+FROM eclipse-temurin:latest
 
 WORKDIR /app
 
+COPY . /app
+
 RUN javac Main.java
 
-EXPOSE 80
-
-CMD ["java", "main"]
+CMD ["java", "Main"]
